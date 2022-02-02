@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         resultField.setText(operand.toString().replace('.', ','));
-        resultField.setText(String.format("%d",operand.toString()));
         numberField.setText("");
     }
 }
