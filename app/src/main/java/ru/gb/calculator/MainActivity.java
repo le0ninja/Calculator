@@ -20,10 +20,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // получаем все поля по id из activity_main.xml
+        initView();
+    }
+
+    private void initView() {
         resultField = findViewById(R.id.resultField);
         numberField = findViewById(R.id.numberField);
         operationField = findViewById(R.id.operationField);
     }
+
     // сохранение состояния
     @Override
     protected void onSaveInstanceState(Bundle outState) {

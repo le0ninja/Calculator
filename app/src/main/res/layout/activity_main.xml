@@ -195,5 +195,38 @@
             android:onClick="onOperationClick"
             android:text="@string/btnEquals" />
     </LinearLayout>
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forthButtonPanel">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="themeDefault" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialRed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="themeRed" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="themeGreen" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialBlue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="themeBlue" />
+
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
