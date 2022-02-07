@@ -16,16 +16,16 @@
     <style name="myThemeYellow" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:navigationBarColor">@color/yellow_500</item>
         <item name="colorPrimary">@color/yellow_500</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black_500</item>
         <item name="colorPrimaryContainer">@color/yellow_500</item>
         <item name="colorOnPrimaryContainer">@color/yellow_500</item>
         <item name="colorPrimaryInverse">@color/yellow_500</item>
         <item name="colorSecondary">@color/yellow_500</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/black_500</item>
         <item name="colorSecondaryContainer">@color/yellow_500</item>
         <item name="colorOnSecondaryContainer">@color/yellow_500</item>
         <item name="colorTertiary">@color/yellow_500</item>
-        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorOnTertiary">@color/black_500</item>
         <item name="colorTertiaryContainer">@color/yellow_500</item>
         <item name="colorOnTertiaryContainer">@color/yellow_500</item>
         <item name="android:statusBarColor">@color/yellow_500</item>
@@ -35,16 +35,16 @@
     <style name="myThemeGreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:navigationBarColor">@color/green_700</item>
         <item name="colorPrimary">@color/green_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black_500</item>
         <item name="colorPrimaryContainer">@color/green_700</item>
         <item name="colorOnPrimaryContainer">@color/green_700</item>
         <item name="colorPrimaryInverse">@color/green_700</item>
         <item name="colorSecondary">@color/green_700</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/black_500</item>
         <item name="colorSecondaryContainer">@color/green_700</item>
         <item name="colorOnSecondaryContainer">@color/green_700</item>
         <item name="colorTertiary">@color/green_700</item>
-        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorOnTertiary">@color/black_500</item>
         <item name="colorTertiaryContainer">@color/green_700</item>
         <item name="colorOnTertiaryContainer">@color/green_700</item>
         <item name="android:statusBarColor">@color/green_700</item>
