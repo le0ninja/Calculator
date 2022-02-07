@@ -44,6 +44,49 @@
         app:layout_constraintTop_toBottomOf="@+id/resultField"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <RadioGroup
+        android:id="@+id/radioButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forthButtonPanel">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/themedefault"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/text_size_view" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialYellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/themeyellow"
+            android:textColor="@color/yellow_500"
+            android:textSize="@dimen/text_size_view" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialGreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/themegreen"
+            android:textColor="@color/green_700"
+            android:textSize="@dimen/text_size_view" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioButtonMaterialPink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/themepink"
+            android:textColor="@color/pink_300"
+            android:textSize="@dimen/text_size_view" />
+
+    </RadioGroup>
+
     <LinearLayout
         android:id="@+id/firstButtonPanel"
         android:layout_width="0dp"

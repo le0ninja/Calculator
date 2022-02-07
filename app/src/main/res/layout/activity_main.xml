@@ -210,28 +210,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/themedefault"
-            android:textColor="@color/purple_200" />
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/text_size_view" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialYellow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/themeyellow"
-            android:textColor="@color/yellow_500" />
+            android:textColor="@color/yellow_500"
+            android:textSize="@dimen/text_size_view" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialGreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/themegreen"
-            android:textColor="@color/green_700" />
+            android:textColor="@color/green_700"
+            android:textSize="@dimen/text_size_view" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialPink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/themepink"
-            android:textColor="@color/pink_300" />
+            android:textColor="@color/pink_300"
+            android:textSize="@dimen/text_size_view" />
 
     </RadioGroup>
 
