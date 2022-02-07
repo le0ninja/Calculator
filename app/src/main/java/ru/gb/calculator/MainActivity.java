@@ -2,25 +2,39 @@ package ru.gb.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView resultField; // текстовое поле для вывода результата
     EditText numberField;   // поле для ввода числа
     TextView operationField;    // текстовое поле для вывода знака операции
     Double operand = null;  // операнд операции
     String lastOperation = "="; // последняя операция
+    private static final String PREF_NAME = "key_pref";
+    private static final String PREF_THEME_KEY = "key_pref_theme";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getAppTheme());
         setContentView(R.layout.activity_main);
         // получаем все поля по id из activity_main.xml
         initView();
+        initRadio();
+    }
+
+    private void initRadio() {
+        ((RadioButton) findViewById(R.id.radioButtonMaterialDefault)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialGreen)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialPink)).setOnClickListener(this);
+        ((RadioButton) findViewById(R.id.radioButtonMaterialYellow)).setOnClickListener(this);
     }
 
     private void initView() {
@@ -110,5 +124,40 @@ public class MainActivity extends AppCompatActivity {
         }
         resultField.setText(operand.toString().replace('.', ','));
         numberField.setText("");
+    }
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.radioButtonMaterialDefault:{
+                setAppTheme(R.style.ThemeCalculator);
+                break;
+            }
+            case R.id.radioButtonMaterialGreen:{
+                setAppTheme(R.style.myThemeGreen);
+                break;
+            }
+            case R.id.radioButtonMaterialPink:{
+                setAppTheme(R.style.myThemePink);
+                break;
+            }
+            case R.id.radioButtonMaterialYellow:{
+                setAppTheme(R.style.myThemeYellow);
+                break;
+            }
+        }
+        recreate();
+    }
+
+    protected void setAppTheme(int codeStyle) {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(PREF_THEME_KEY, codeStyle);
+        editor.apply();
+    }
+
+    protected int getAppTheme() {
+        SharedPreferences sharedPref = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        return sharedPref.getInt(PREF_THEME_KEY,R.style.ThemeCalculator);
     }
 }

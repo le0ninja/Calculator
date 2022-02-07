@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">MyCalculator</string>
     <string name="btn7">7</string>
     <string name="btn8">8</string>
     <string name="btn9">9</string>
@@ -16,4 +16,8 @@
     <string name="btn0">0</string>
     <string name="btnAddition">+</string>
     <string name="btnEquals">=</string>
+    <string name="themedefault">themeDefault</string>
+    <string name="themeyellow">themeYellow</string>
+    <string name="themegreen">themeGreen</string>
+    <string name="themepink">themePink</string>
 </resources>

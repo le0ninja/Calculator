@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/my_background" />
+        android:src="@drawable/my_background"
+        tools:ignore="ContentDescription" />
     <!-- поле результата -->
     <TextView
         android:id="@+id/resultField"
@@ -37,7 +38,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        android:minHeight="48dp"
+        android:minHeight="@dimen/minHeightSize"
         android:textSize="@dimen/text_size_view"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -53,28 +54,28 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberField">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn7" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn8" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn9" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -91,28 +92,28 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstButtonPanel">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn4" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn5" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn6" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -129,28 +130,28 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondButtonPanel">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn1" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn2" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn3" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -167,34 +168,35 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/thirdButtonPanel">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btnDot" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onNumberClick"
             android:text="@string/btn0" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onOperationClick"
             android:text="@string/btnAddition" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onOperationClick"
             android:text="@string/btnEquals" />
     </LinearLayout>
+
     <RadioGroup
         android:id="@+id/radioButtons"
         android:layout_width="wrap_content"
@@ -207,25 +209,29 @@
             android:id="@+id/radioButtonMaterialDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="themeDefault" />
+            android:text="@string/themedefault"
+            android:textColor="@color/purple_200" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialRed"
+            android:id="@+id/radioButtonMaterialYellow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="themeRed" />
+            android:text="@string/themeyellow"
+            android:textColor="@color/yellow_500" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
             android:id="@+id/radioButtonMaterialGreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="themeGreen" />
+            android:text="@string/themegreen"
+            android:textColor="@color/green_700" />
 
         <com.google.android.material.radiobutton.MaterialRadioButton
-            android:id="@+id/radioButtonMaterialBlue"
+            android:id="@+id/radioButtonMaterialPink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="themeBlue" />
+            android:text="@string/themepink"
+            android:textColor="@color/pink_300" />
 
     </RadioGroup>
 
